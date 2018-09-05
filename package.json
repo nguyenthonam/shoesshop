@@ -6,10 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "QuanNA, NamNT",
+  "author": "HoanNK, QuanNA, NamNT",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "mongodb": "^3.1.4"
+    "mongodb": "^3.1.4",
+    "nodemon": "^1.18.4"
   }
 }
