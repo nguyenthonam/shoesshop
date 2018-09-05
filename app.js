@@ -1,14 +1,12 @@
 const http = require('http');
+const fs = require('fs');
+const url = require('url');
 
-const hostname = 'shoesshop.com';
-const port = 80;
+const configApp = require('./config/app.js')
+const generic_func = require('./helpers/generic_func');
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World\n');
-});
+const server = http.createServer(generic_func.onRequest);
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(configApp.port, configApp.hostname, () => {
+  console.log(`Server running at http://${configApp.hostname}:${configApp.port}/`);
 });
